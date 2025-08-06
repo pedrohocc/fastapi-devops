@@ -23,12 +23,11 @@ jobs:
 
       - name: Executar Testes
         run: |
-          PYTHONPATH=.
-          pytest
+          PYTHONPATH=. pytest
 
       - name: Build
         run: |
-          fastapi run app/main.py
+          PYTHONPATH=. fastapi run app/main.py
 
       - name: Deploy (Exemplo)
         run: |
