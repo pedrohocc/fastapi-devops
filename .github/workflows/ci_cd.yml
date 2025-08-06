@@ -27,7 +27,9 @@ jobs:
 
       - name: Build
         run: |
-          PYTHONPATH=. fastapi run app/main.py
+          PYTHONPATH=. fastapi run app/main.py &
+          sleep 3
+          curl -f http://127.0.0.1:8000/docs
 
       - name: Deploy (Exemplo)
         run: |
