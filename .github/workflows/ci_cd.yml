@@ -23,6 +23,7 @@ jobs:
 
       - name: Executar Testes
         run: |
+          PYTHONPATH=.
           pytest
 
       - name: Build
